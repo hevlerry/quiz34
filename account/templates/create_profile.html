@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>JOIN OUR GROWING COMMUNITY </h1>
+    </h1> CREATE YOUR PROFILE TODAY !</h1>
+  <form method="post">
+  <form action="{% url 'account_create' %}" method="get">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">REGISTER</button>
+  </form>
+{% endblock %}
